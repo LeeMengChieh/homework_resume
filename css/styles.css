@@ -1,52 +1,72 @@
-@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Zen+Maru+Gothic&display=swap');
 
-/* font-family: 'Mukta', sans-serif; */
-
-
-/* 電腦與平板上應用的樣式 */
 
 body {
-    background-color: rgb(255, 255, 255);
+    background-color: #F5CD52;
     margin: 0px;
-    font-size: 14px;
-    font-family: 'Mukta', sans-serif;
+    font-size: 16px;
+    font-family: 'Zen Maru Gothic', "Noto Sans TC";
+    /* padding-top: 80px; */
 }
 
 img {
     vertical-align: bottom;
-    /* 去除圖片對齊，以英文字對齊線為主 */
 }
-
+/* ================================================ header ============================================= */
 .header {
+    position: fixed;
+    width: 100%;
+    padding: 10px 20px 10px 20px;
     display: flex;
-    padding: 20px 0;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #eaeaea;
-    background: #fff;
-    z-index: 2;
+    border-bottom: 1px solid #E9832A;
+    background: #F5CD52;;
+    z-index: 10;
 }
 
 .logo {
-    width: 100px;
-    background-color: brown;
-    text-align: center;
     padding: 10px;
+    position: relative;
+      width: 50px;
+    height: 50px;
 }
 
-.logo>a {
-    width: 100%;
-    text-decoration: none;
-    color: #fff;
-    font-size: 20px;
-    font-weight: bold;
+.logo img {
+    position: absolute;  
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    transition: opacity 1s ease-in-out;
+}
+
+.img-b {
+    opacity: 0;
+    pointer-events: none; 
+}
+
+.logo:hover .img-b {
+    opacity: 1;
+}
+
+.logo:hover .img-a {
+    opacity: 0;
+}
+
+.logo > a {
     display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
 }
 
 .navbar>ul {
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding-left: 20px;
+    padding-right: 20px;
     display: flex;
     flex-direction: row;
     align-items: stretch;
@@ -60,9 +80,14 @@ img {
 .navbar>ul>li>a {
     display: block;
     text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Zen Maru Gothic";
     font-size: 16px;
-    color: #333;
+    font-weight: bold;
+    color: #E9832A;
+        transition: color 0.6s ease-in-out;
+}
+.navbar>ul>li>a:hover{
+    color:#e92a2a ;
 }
 
 .menu-icon {
@@ -76,7 +101,7 @@ img {
     margin: auto;
 }
 
-
+/* ================================================ banner ============================================= */
 /* Banner Animation */
 
 #Banner {
@@ -809,20 +834,30 @@ footer p {
     .triangle {
         display: none;
     }
-    
+    /* ================================================ header ============================================= */
     .header {
+        position: static; 
+        width: 100%;
         flex-wrap: wrap;
         align-items: stretch;
+            flex-direction: column;  
+    align-items: flex-start; 
+    padding: 10px;  
+        
     }
+    .logo {display: none;}
     .menu-icon {
+        width: 100%;
         display: block;
-        background: #8b0f9f;
+        background: #E9832A;
         padding: 5px;
         display: flex;
         color: #fff;
-        font-family: 'Dosis';
+        font-family: 'Zen Maru Gothic';
         justify-content: center;
         align-items: center;
+        align-self: flex-end; 
+    margin-bottom: 10px;  
     }
     .navbar {
         width: 100%;
@@ -834,7 +869,6 @@ footer p {
         display: block;
         padding: 10px;
         text-align: center;
-        border-bottom: 1px solid #b9b9b9;
         flex: 1 1 0%;
     }
     #About .container {
