@@ -982,7 +982,7 @@ h2 {
 }
 
 
-/* Contact */
+/*================================================ Contact ================================================*/
 
 #Contact {
     padding: 100px 0;
@@ -1149,42 +1149,50 @@ footer p {
 /*================================================ 手機 ================================================*/
 
 @media screen and (max-width: 767px) {
-    .circle1 {
-        position: absolute;
-        width: 500px;
-        height: 500px;
-        top: -10%;
-        left: 60%;
-        border-radius: 50%;
-        border: 15px solid #f89e59;
-        z-index: -1;
-        animation: move 10s ease-in infinite;
+    .container {
+        padding: 50px 0;
+        width: 95%;
+        margin: auto;
     }
 
-    .circle2 {
+    .bubble-tea {
         position: absolute;
         margin-left: 40%;
-        margin-top: 20%;
+        margin-top: -40%;
         width: 150px;
         height: 150px;
+        opacity: 0.7;
     }
 
-    .shape {
-        width: 100px;
-        height: 100px;
-
+    .pearl {
+        width: 10px;
+        height: 10px;
+        left: 30%;
+        bottom: 10%;
     }
+
+    .pearl1 {
+        left: 40%;
+        bottom: 10%;
+    }
+
+    .pearl2 {
+        left: 20%;
+        bottom: 10%;
+    }
+
 
     .slogan {
         margin: auto 20px;
     }
 
     .slogan h2 {
+        line-height: 1.2;
         font-size: 2rem;
     }
 
-    .triangle {
-        display: none;
+    .description h2 {
+        line-height: 1.2;
     }
 
     /* ================================================ header ============================================= */
@@ -1271,13 +1279,48 @@ footer p {
         margin-right: 5px;
     }
 
+    .work-period {
+        margin-left: 0px;
+    }
+
+    #Work-experience .container {
+        max-width: 100%;
+        margin: 10px;
+    }
+
+    .container h2 {
+        margin-left: 20px;
+    }
+
+    .job-title {
+        line-height: 1.2;
+    }
+
+    #Portfolio .container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: auto;
+    }
+
+
     .card {
-        width: 48%;
-        height: 200px;
-        max-height: 100%;
+        grid-column: span 1 !important;
+        /* 取消原本的橫跨設定 */
+        grid-row: auto !important;
+        /* 自動排列 */
+        aspect-ratio: 1 / 1;
+        /* 如果想固定卡片為正方形，可以加這行 */
     }
 
     .card:nth-child(6) {
         height: auto;
+    }
+
+    .col-6 img {
+        margin-left: 0;
+
+    }
+
+    .col-6 h2 {
+        margin: 0px;
     }
 }
